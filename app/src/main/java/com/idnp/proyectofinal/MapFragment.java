@@ -9,9 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,14 +29,15 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.idnp.proyectofinal.models.VaccinationPlace;
 
 import java.util.ArrayList;
+import java.util.Map;
 
-public class MapFragment extends Fragment implements OnMapReadyCallback{
+public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener, View.OnClickListener {
 
     private MapViewModel mViewModel;
     private Marker markerPais;
     GoogleMap map;
     ArrayList<VaccinationPlace> places;
-    private Fragment MarkerDetailFragment;
+    private static final String TAG = "MyActivity";
 
     public static MapFragment newInstance() {
         return new MapFragment();
@@ -70,6 +75,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         //Inicializamos el fragment del mapa
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
         supportMapFragment.getMapAsync(this);
+
+
         // Eventos clickear info marcador
         //map.setOnMarkerClickListener(this);
 
@@ -115,10 +122,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         LatLng inicio = new LatLng(-16.3988006, -71.5390964);
         map.moveCamera(CameraUpdateFactory.newLatLng(inicio));
     }*/
+
+    /*Método que carga el mapa en el fragment, añade los marcadores y mueve la posicion de la cámara*/
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-
+        map.setOnMarkerClickListener(this);
         // inside on map ready method
         // we will be displaying all our markers.
         // for adding markers we are running for loop and
@@ -137,16 +146,26 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
             map.moveCamera(CameraUpdateFactory.newLatLng(a));
         }
     }
-    /* Falta probar pasar a otro fragment para mostrar details
-    @Override
+    /* Falta probar pasar a otro fragment para mostrar details*/
+    /*No funcional - en prueba*/
     public boolean onMarkerClick(@NonNull Marker marker) {
         if (marker.equals(places.get(3))) {
-            Intent intent = new Intent(this, MarkerDetailFragment);
-            intent.putExtra(Double.toString(places.get(3).getLat()), marker.getPosition().latitude);
-            intent.putExtra(Double.toString(places.get(3).getLong()), marker.getPosition().longitude);
+            Log.i(TAG,"nombr: "+ places.get(3).getPlaceName());
+            Intent intent = new Intent(getActivity(), PlaceDetailActivity.class);
+            intent.putExtra("EXTRA_LATITUD", marker.getPosition().latitude);
+            intent.putExtra("EXTRA_LONGITUD", marker.getPosition().longitude);
             startActivity(intent);
         }
         return false;
-        return false;
-    }*/
+    }
+
+    public void prueba(View view){
+        Intent irdetalles = new Intent(getActivity(),PlaceDetailActivity.class);
+        startActivity(irdetalles);
+    }
+    /*prueba*/
+    @Override
+    public void onClick(View view) {
+
+    }
 }

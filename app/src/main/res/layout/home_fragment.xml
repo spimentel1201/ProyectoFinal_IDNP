@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top"
     tools:context=".HomeFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
-    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:text="NombreApp"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+    <FrameLayout
+        android:layout_width="200sp"
+        android:layout_height="120sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105sp"
+        tools:layout_editor_absoluteY="96sp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Qué es el Coronavirus"
+            android:layout_marginBottom="40sp"
+            android:inputType="textImeMultiLine"
+            android:maxLines="3"
+            android:textSize="12sp"
+            android:textAlignment="center" />
+    </FrameLayout>
+    <!--
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/person_profile"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_gravity="bottom">
+        <com.idnp.proyectofinal.statistics.BarChart
+            android:layout_width="200sp"
+            android:layout_height="200sp" />
 
-</FrameLayout>
+        <com.idnp.proyectofinal.statistics.BarChart
+            android:layout_width="200sp"
+            android:layout_height="200sp" />
+   </androidx.appcompat.widget.LinearLayoutCompat>-->
+</androidx.appcompat.widget.LinearLayoutCompat>

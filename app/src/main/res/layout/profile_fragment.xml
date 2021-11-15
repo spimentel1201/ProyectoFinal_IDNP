@@ -5,13 +5,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ProfileFragment">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Perfil"
+        android:textAlignment="center"
+        android:layout_marginTop="25sp"
+        android:layout_marginBottom="20sp"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="40sp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="20sp"
+        tools:layout_editor_absoluteX="0sp"
+        tools:layout_editor_absoluteY="85sp">
 
         <ImageView
             android:id="@+id/imagePerfil"
@@ -19,86 +27,92 @@
             android:layout_height="120sp"
             android:layout_gravity="center"
             android:background="@drawable/person_profile"
-            tools:ignore="ImageContrastCheck" />
+            tools:ignore="ImageContrastCheck,MissingConstraints"
+            tools:layout_editor_absoluteX="146sp"
+            tools:layout_editor_absoluteY="67sp" />
+
     </FrameLayout>
 
     <TextView
         android:id="@+id/text_labeln"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
         android:text="Nombre"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="10sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0sp"
+        tools:layout_editor_absoluteY="311sp" />
 
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
-        android:layout_marginBottom="25sp"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="10sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0sp"
+        tools:layout_editor_absoluteY="352sp" />
 
     <TextView
         android:id="@+id/text_labelcorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
         android:text="Correo"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="10sp"
+        tools:layout_editor_absoluteX="49sp"
+        tools:layout_editor_absoluteY="396sp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/text_correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
-        android:layout_marginBottom="25sp"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="10sp"
+        tools:layout_editor_absoluteX="67sp"
+        tools:layout_editor_absoluteY="433sp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/text_labeldni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
         android:text="DNI"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="10sp"
+        tools:layout_editor_absoluteX="39sp"
+        tools:layout_editor_absoluteY="482sp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/text_dni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="50sp"
-        android:layout_marginBottom="25sp"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        tools:layout_editor_absoluteX="58sp"
+        tools:layout_editor_absoluteY="524sp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/cerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80sp"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="80sp"
         android:background="@drawable/rounded_border"
-        android:onClick="CerrarSesion"
+        android:onClick="cerrarSesion"
         android:text="Cerrar Sesión"
         android:textAlignment="center"
-        android:textColor="#040404" />
+        android:textColor="#040404"
+        tools:layout_editor_absoluteX="80sp"
+        tools:layout_editor_absoluteY="594sp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

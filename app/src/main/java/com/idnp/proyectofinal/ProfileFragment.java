@@ -2,6 +2,7 @@ package com.idnp.proyectofinal;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,12 @@ public class ProfileFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         // TODO: Use the ViewModel
+    }
+
+    public void cerrarSesion(View view){
+        /*Eliminar preferencias de usuario*/
+        Intent cs = new Intent(getActivity(),LoginActivity.class);
+        startActivity(cs);
     }
 
 }

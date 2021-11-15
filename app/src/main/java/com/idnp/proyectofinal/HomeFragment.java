@@ -11,10 +11,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel mViewModel;
+    TextView d;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -23,6 +25,9 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
+        d = getActivity().findViewById(R.id.textView);
+        //d.setText("El coronavirus es una enfermedad nueva que arrasa con las vidas humanas.");
         return inflater.inflate(R.layout.home_fragment, container, false);
     }
 

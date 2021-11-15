@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/button_rounded_border.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/round_border.xml" value="0.21041666666666667" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21458333333333332" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/rounded_border.xml" value="0.21458333333333332" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/splash.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_login.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.1984375" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_menu.xml" value="0.1984375" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_place_detail.xml" value="0.25" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_sign_up.xml" value="0.1796875" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.1984375" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_count.xml" value="0.1984375" />
         <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_marker_detail.xml" value="0.1984375" />
