@@ -2,19 +2,36 @@
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.idnp.proyectofinal.db.DbHelper;
+import com.idnp.proyectofinal.db.DbUsers;
+import com.idnp.proyectofinal.models.User;
+
+import java.util.ArrayList;
 
     public class LoginActivity extends AppCompatActivity {
         private CheckBox opcionMantenerSesion;
+        EditText txt_CorreoL,txt_ContraL;
+        ArrayList<User> usuarios;
+        private Cursor test;
+        DbUsers DbUsers;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login);
             getSupportActionBar().hide();
             opcionMantenerSesion = (CheckBox) findViewById(R.id.checkMantenerSesion);
+            txt_CorreoL = findViewById(R.id.txtCorreoLogin);
+            txt_ContraL = findViewById(R.id.txtContraLogin);
+            DbUsers = new DbUsers(LoginActivity.this);
         }
         /*Botón de redirección a registro*/
         public void irRegistrarme(View view){
@@ -27,7 +44,25 @@ import android.widget.CheckBox;
               /*Guardar las preferencias de usuario*/
             }
             /*Codigo que comprueba los datos*/
+
+            /*Redirección al menú prinipal
             Intent go = new Intent(this, MenuActivity.class);
-            startActivity(go);
+            startActivity(go);*/
+            verificarSesion();
+        }
+        public void verificarSesion(){
+            String usuario = txt_CorreoL.getText().toString();
+            String contraseña = txt_ContraL.getText().toString();
+            usuarios = DbUsers.mostrarUsuarios();
+            for(int i=0;i<usuarios.size();i++){
+                if(usuarios.get(i).getCorreo_electronico().equals(usuario) && usuarios.get(i).getContraseña().equals(contraseña)){
+                    Intent go = new Intent(this, MenuActivity.class);
+                    go.putExtra("idUser",usuarios.get(i).getId());
+                    startActivity(go);
+                }else{
+                    Toast toast = Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }
         }
 }

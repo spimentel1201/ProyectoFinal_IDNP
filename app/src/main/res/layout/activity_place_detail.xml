@@ -14,6 +14,25 @@
         tools:layout_editor_absoluteY="1sp"
         android:gravity="center"
         tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/imagePerfil"
+            android:layout_width="120sp"
+            android:layout_height="120sp"
+            android:layout_gravity="center"
+            android:background="@drawable/splash"
+            android:layout_marginBottom="20sp"
+            tools:ignore="ImageContrastCheck,MissingConstraints"
+            tools:layout_editor_absoluteX="146sp"
+            tools:layout_editor_absoluteY="67sp" />
+
+
+        <TextView
+            android:id="@+id/text_nombreCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20sp"
+            android:text="Centro de Vacunación" />
 
         <TextView
             android:id="@+id/placename"
@@ -21,21 +40,51 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="40sp"
-            android:text="TextView" />
+            android:hint="Mi Centro de Vac" />
 
+        <TextView
+            android:id="@+id/text_tipovacuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20sp"
+            android:text="Vacuna" />
+
+        <TextView
+            android:id="@+id/vaccineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:hint="Pfizer" />
+
+        <TextView
+            android:id="@+id/text_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:text="Latitude" />
         <TextView
             android:id="@+id/latitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginBottom="40sp"
-            android:text="TextView" />
+            android:hint="-0.00000000" />
 
+        <TextView
+            android:id="@+id/txt_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:text="Longitud" />
         <TextView
             android:id="@+id/longitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="TextView" />
+            android:hint="longitude" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

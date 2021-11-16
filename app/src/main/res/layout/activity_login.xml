@@ -79,7 +79,7 @@
             android:layout_marginTop="8sp"
             android:layout_marginEnd="30sp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:labelFor="@+id/viewNombre"
             android:minHeight="48dp"
             android:textColor="@color/black"

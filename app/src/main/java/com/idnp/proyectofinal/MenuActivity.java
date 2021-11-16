@@ -11,11 +11,17 @@ import android.view.MenuItem;
 import android.view.Window;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.idnp.proyectofinal.db.DbUsers;
+import com.idnp.proyectofinal.models.User;
 
 public class MenuActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     MapFragment mapFragment = new MapFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+    int id_value;
+    User x;
+    DbUsers DbUsers;
+    Bundle val;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,15 @@ public class MenuActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_menu);
         getSupportActionBar().hide();
+        DbUsers = new DbUsers(MenuActivity.this);
+        id_value = getIntent().getIntExtra("idUser",0);
+        x = DbUsers.verUsuario(id_value);
+        val = new Bundle();
+        val.putString("nombreU",x.getNombres());
+        val.putString("correoU",x.getCorreo_electronico());
+        val.putString("dniU",x.getDni());
+        //getIntent().putExtra("complexObject", x);
+
         //Referencia al bottomNavigation
         BottomNavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -48,6 +63,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void loadFragment(Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        fragment.setArguments(val);
         transaction.replace(R.id.frame_layout,fragment);
         transaction.commit();
     }
