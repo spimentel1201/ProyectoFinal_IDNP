@@ -70,45 +70,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         places.add(a9);
         places.add(a10);
 
-        //LatLng inicio = new LatLng(-16.3988006,-71.5390964);
         //Inicializamos la View
         View view = inflater.inflate(R.layout.map_fragment, container, false);
         //Inicializamos el fragment del mapa
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.google_map);
         supportMapFragment.getMapAsync(this);
-
-
-        // Eventos clickear info marcador
-        //map.setOnMarkerClickListener(this);
-
-        //Prueba Marcadores
-        /*for(int i=0;i<places.size();i++){
-            LatLng a = new LatLng(places.get(i).getLat(),places.get(i).getLong());
-            String title = places.get(i).getPlaceName();
-            map.addMarker(new MarkerOptions().position(a).title(title).snippet("My Snippet"+"\n"+"1st Line Text"+"\n"+"2nd Line Text"+"\n"+"3rd Line Text").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        }*/
-
-
-        //Sincronizamos para mostrar el mapa
-        /*
-        supportMapFragment.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(@NonNull GoogleMap googleMap) {
-                    googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                        @Override
-                        public void onMapClick(@NonNull LatLng latLng) {
-                            MarkerOptions markerOptions = new MarkerOptions();
-                            markerOptions.position(latLng);
-                            markerOptions.title("Estás aquí");
-                            googleMap.clear();
-                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
-                                    latLng,10
-                            ));
-                            googleMap.addMarker(markerOptions);
-                        }
-                    });
-                }
-        });*/
         return view;
     }
 
@@ -118,60 +84,28 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
         mViewModel = new ViewModelProvider(this).get(MapViewModel.class);
         // TODO: Use the ViewModel
     }
-    /*public void onMapReady(GoogleMap googleMap) {
-        map = googleMap;
-        LatLng inicio = new LatLng(-16.3988006, -71.5390964);
-        map.moveCamera(CameraUpdateFactory.newLatLng(inicio));
-    }*/
 
     /*Método que carga el mapa en el fragment, añade los marcadores y mueve la posicion de la cámara*/
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         map.setOnMarkerClickListener(this);
-        // inside on map ready method
-        // we will be displaying all our markers.
-        // for adding markers we are running for loop and
-        // inside that we are drawing marker on our map.
         LatLng inicio = new LatLng(-16.3988006,-71.5390964);
         map.animateCamera(CameraUpdateFactory.zoomTo(20.0f));
         map.moveCamera(CameraUpdateFactory.newLatLng(inicio));
+        /*Agregar los centros de vacunación al mapa haciendo uso de marcadores
+            los cuales tienen información del lugar*/
         for (int i = 0; i < places.size(); i++) {
             LatLng a = new LatLng(places.get(i).getLat(),places.get(i).getLong());
             String title = places.get(i).getPlaceName();
             String vaccineType = places.get(i).getVaccineName();
-
-            // below line is use to add marker to each location of our array list.
             MarkerOptions mko = new MarkerOptions();
             mko.position(a).title(title);
             mko.position(a).snippet(vaccineType);
             map.addMarker(mko);
-
-            // below lin is use to zoom our camera on map.
-            //map.animateCamera(CameraUpdateFactory.zoomTo(20.0f));
-
-            // below line is use to move our camera to the specific location.
-            //map.moveCamera(CameraUpdateFactory.newLatLng(a));
         }
-        /*
-        map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(Marker marker) {
-                Log.i(TAG,"latitude: "+ marker.getPosition().latitude);
-                Log.d("latitude ", "latitud: " + marker.getPosition().latitude);
-                Intent intent = new Intent(getActivity(), PlaceDetailActivity.class);
-                intent.putExtra("PLACE_NAME", marker.getTitle());
-                intent.putExtra("VACCINE_TYPE", marker.getSnippet());
-                intent.putExtra("EXTRA_LATITUD", marker.getPosition().latitude);
-                intent.putExtra("EXTRA_LONGITUD", marker.getPosition().longitude);
-                startActivity(intent);
-
-                return false;
-            }
-        });*/
     }
-    /* Falta probar pasar a otro fragment para mostrar details*/
-    /*No funcional - en prueba*/
+    /* Métood para pasar al activity para mostrar details*/
     public boolean onMarkerClick(@NonNull Marker marker) {
 
             marker.showInfoWindow();
