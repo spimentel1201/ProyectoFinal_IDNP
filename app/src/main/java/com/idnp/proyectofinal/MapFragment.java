@@ -185,9 +185,4 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
 
         return false;
     }
-
-    public void prueba(View view){
-        Intent irdetalles = new Intent(getActivity(),PlaceDetailActivity.class);
-        startActivity(irdetalles);
-    }
 }

@@ -24,7 +24,7 @@
             android:layout_marginTop="8sp"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="32sp"
             android:textColor="@color/black"
             android:layout_marginEnd="50sp"
             android:text="@string/TituloLogin" />
@@ -44,6 +44,7 @@
             android:textColor="@color/black"
             android:layout_marginTop="8sp"
             android:layout_marginEnd="30sp"
+            android:textSize="20sp"
             android:text="@string/hint_correo_electronico" />
 
         <EditText
@@ -58,7 +59,7 @@
             android:labelFor="@+id/viewNombre"
             android:minHeight="48dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -69,6 +70,7 @@
             android:layout_marginStart="30sp"
             android:layout_marginTop="8sp"
             android:layout_marginEnd="30sp"
+            android:textSize="20sp"
             android:text="@string/hint_contrasena" />
 
         <EditText
@@ -83,7 +85,7 @@
             android:labelFor="@+id/viewNombre"
             android:minHeight="48dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="20sp"
             tools:ignore="SpeakableTextPresentCheck" />
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/checkMantenerSesion"
@@ -106,7 +108,7 @@
             android:onClick="iniciarSesion"
             android:layout_marginBottom="20sp"
             android:layout_marginTop="20sp"
-            android:textSize="14sp" />
+            android:textSize="20sp" />
         <Button
             android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
@@ -117,6 +119,6 @@
             android:onClick="irRegistrarme"
             android:layout_marginBottom="20sp"
             android:layout_marginTop="20sp"
-            android:textSize="14sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 </ScrollView>

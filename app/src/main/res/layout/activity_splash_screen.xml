@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     tools:context=".SplashScreenActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,13 +21,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="40sp"
+            android:textColor="@color/black"
             android:typeface="sans"
             android:textStyle="italic"
             android:shadowColor="#00ccff"
             android:shadowRadius="2"
             android:shadowDx="1"
             android:shadowDy="1"
-            android:text="NombreApp"/>
+            android:text="InfoVac"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
