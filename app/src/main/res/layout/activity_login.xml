@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.idnp.proyectofinal.viewmodel.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/fondo"
+        tools:context=".LoginActivity">
+
+        <LinearLayout
+            android:layout_width="400sp"
+            android:layout_height="0sp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:background="@drawable/round_border"
+            android:layout_marginBottom="20sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/viewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginTop="8sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="50sp"
+                android:text="@string/TituloLogin" />
+
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_gravity="center"
+                android:background="@drawable/person_profile"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/viewCorreoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8sp"
+                android:layout_marginEnd="30sp"
+                android:textSize="20sp"
+                android:text="@string/hint_correo_electronico" />
+
+            <EditText
+                android:text="@={loginViewModel.usuario}"
+                android:id="@+id/txtCorreoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginEnd="30sp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:labelFor="@+id/viewNombre"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/viewContraLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginEnd="30sp"
+                android:textSize="20sp"
+                android:text="@string/hint_contrasena" />
+
+            <EditText
+                android:text="@={loginViewModel.password}"
+                android:id="@+id/txtContraLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginEnd="30sp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:labelFor="@+id/viewNombre"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkMantenerSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginEnd="30sp"
+                android:textColor="@color/black"
+                android:ems="10"
+                android:text="Mantener Sesion iniciada" />
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded_border"
+                android:layout_gravity="center"
+                android:text="@string/btn_login"
+                android:onClick="@{()-> loginViewModel.verificarLogin()}"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="20sp"
+                tools:toastMessage="@{loginViewModel.toastMessage}" />/>
+
+            <Button
+                android:id="@+id/btnRegistrarse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded_border"
+                android:layout_gravity="center"
+                android:text="@string/btn_guarda"
+                android:onClick="@{()-> loginViewModel.registrarUsuario()}"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

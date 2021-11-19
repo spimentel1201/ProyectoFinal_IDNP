@@ -1,0 +1,46 @@
+package com.idnp.proyectofinal.models;
+
+public class VaccinationPlace {
+    double alat, along;
+    int id;
+    String placeName;
+    String vaccineName;
+
+    public VaccinationPlace(){
+
+    }
+    public VaccinationPlace(String a, String v, double b, double c){
+        setPlaceName(a);
+        setCc(b,c);
+        setVaccineName(v);
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setPlaceName(String placeName1){
+        this.placeName=placeName1;
+    }
+    public void setCc(double latx,double longy){
+        this.alat=latx;
+        this.along=longy;
+    }
+    public String getPlaceName(){
+        return this.placeName;
+    }
+    public double getLat(){
+        return this.alat;
+    }
+    public double getLong(){
+        return this.along;
+    }
+    public String getVaccineName() {
+        return vaccineName;
+    }
+
+    public void setVaccineName(String vaccineName) {
+        this.vaccineName = vaccineName;
+    }
+}

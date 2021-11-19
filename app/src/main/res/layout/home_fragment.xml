@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo"
+    tools:context=".HomeFragment">
+    <LinearLayout
+        android:layout_width="400sp"
+        android:layout_height="0sp"
+        android:layout_gravity="center"
+        android:layout_margin="5sp"
+        android:background="@drawable/round_border"
+        android:layout_marginBottom="20sp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:text="InfoVac"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+        <ImageView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_gravity="center"
+            android:src="@drawable/virus"
+            android:layout_marginBottom="20sp">
+        </ImageView>
+    <FrameLayout
+        android:layout_width="250sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105sp"
+        tools:layout_editor_absoluteY="96sp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="¿Qué es el Coronavirus?"
+            android:layout_marginBottom="30sp"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewinfo"
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:layout_marginTop="40sp"
+            android:layout_marginBottom="40sp"
+            android:text="El coronavirus es una enfermedad infecciosa causada por un nuevo virus que no había sido detectado en humanos hasta el momento."
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </FrameLayout>
+        <LinearLayout
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewCifras"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:text="Vacunas Administradas"
+                android:layout_marginBottom="20sp"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textViewinfoCifras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="37,772,743 personas"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewinfoTextoPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Primera dosis"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewinfoCifrasPD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20,875,814 personas"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/textViewinfoTextoSD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dosis completa"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewinfoCifrasSD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16,481,538 personas"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+    <!--
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_gravity="bottom">
+        <com.idnp.proyectofinal.statistics.BarChart
+            android:layout_width="200sp"
+            android:layout_height="200sp" />
+
+        <com.idnp.proyectofinal.statistics.BarChart
+            android:layout_width="200sp"
+            android:layout_height="200sp" />
+   </androidx.appcompat.widget.LinearLayoutCompat>-->
+    </LinearLayout>
+</ScrollView>

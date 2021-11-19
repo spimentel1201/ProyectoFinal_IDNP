@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_location">Ubicación</string>
+    <string name="title_profile">Perfil</string>
+    <string name="TituloCrear">Registrarse</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellido">Apellidos</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_Dni">DNI</string>
+    <string name="hint_correo_electronico">Correo</string>
+    <string name="btn_guarda">Registrarme</string>
+    <string name="TituloLogin">Iniciar Sesión</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="hint_contrasena">Contraseña</string>
+</resources>

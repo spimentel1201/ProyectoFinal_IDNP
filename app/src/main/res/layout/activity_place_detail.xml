@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo"
+    tools:context=".PlaceDetailActivity">
+
+    <LinearLayout
+        android:layout_width="400sp"
+        android:layout_height="0sp"
+        android:layout_gravity="center"
+        android:layout_margin="5sp"
+        android:background="@drawable/round_border"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="40sp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imagePerfil"
+            android:layout_width="120sp"
+            android:layout_height="120sp"
+            android:layout_gravity="center"
+            android:background="@drawable/splash"
+            android:layout_marginBottom="20sp"
+            tools:ignore="ImageContrastCheck,MissingConstraints"
+            tools:layout_editor_absoluteX="146sp"
+            tools:layout_editor_absoluteY="67sp" />
+
+
+        <TextView
+            android:id="@+id/text_nombreCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Centro de Vacunación" />
+
+        <TextView
+            android:id="@+id/placename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:hint="Mi Centro de Vac" />
+
+        <TextView
+            android:id="@+id/text_tipovacuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Vacuna" />
+
+        <TextView
+            android:id="@+id/vaccineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:hint="Pfizer" />
+
+        <TextView
+            android:id="@+id/text_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Latitud" />
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:hint="-0.00000000" />
+
+        <TextView
+            android:id="@+id/txt_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="40sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Longitud" />
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginBottom="40sp"
+            android:hint="longitude" />
+    </LinearLayout>
+</ScrollView>
