@@ -1,10 +1,13 @@
 package com.idnp.proyectofinal.db;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import com.idnp.proyectofinal.models.VaccinationPlace;
 
 public class DbHelper extends SQLiteOpenHelper {
 
@@ -36,6 +39,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 "latitud DOUBLE NOT NULL," +
                 "longitud DOUBLE NOT NULL," +
                 "tipo_vacuna TEXT NOT NULL)");
+        sqLiteDatabase.execSQL("insert into TABLE_CENTROS(nombres,latitud,longitud,tipo_vacuna) values('Universidad Católica Santa Maria',-16.4060596,-71.5476231,'Pfizer')");
     }
 
     @Override

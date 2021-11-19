@@ -9,6 +9,10 @@
         android:id="@+id/navigation_location"
         android:icon="@drawable/location_menu"
         android:title="@string/title_location" />
+    <item
+        android:id="@+id/navigation_places"
+        android:icon="@drawable/home_menu"
+        android:title="@string/title_place" />
 
     <item
         android:id="@+id/navigation_profile"

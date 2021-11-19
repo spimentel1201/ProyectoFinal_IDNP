@@ -36,7 +36,11 @@
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
-            android:exported="false" />
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.idnp.proyectofinal.MenuActivity" />
+        </activity>
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">

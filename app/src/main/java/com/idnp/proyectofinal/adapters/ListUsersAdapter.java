@@ -31,20 +31,18 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.User
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_place_detail, null, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_item_x, null, false);
         return new UserViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListUsersAdapter.UserViewHolder holder, int position) {
-        holder.viewNombre.setText(listaUsuarios.get(position).getNombres());
+        holder.viewVacName.setText(listaUsuarios.get(position).getNombres());
         //holder.viewApellido.setText(listaUsuarios.get(position).getApellidos());
-        holder.viewTelefono.setText(listaUsuarios.get(position).getTelefono());
-        holder.viewDni.setText(listaUsuarios.get(position).getDni());
-        holder.viewCorreo.setText(listaUsuarios.get(position).getCorreo_electronico());
+        holder.viewVacPlace.setText(listaUsuarios.get(position).getTelefono());
     }
 
-    public void filtrado(final String txtBuscar) {
+    /*public void filtrado(final String txtBuscar) {
         int longitud = txtBuscar.length();
         if (longitud == 0) {
             listaUsuarios.clear();
@@ -65,7 +63,7 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.User
             }
         }
         notifyDataSetChanged();
-    }
+    }*/
 
     @Override
     public int getItemCount() {
@@ -74,16 +72,16 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.User
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
 
-        TextView viewNombre, viewApellido, viewTelefono, viewDni, viewCorreo;
+        TextView viewVacName, viewVacPlace;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            viewNombre = itemView.findViewById(R.id.viewNombre);
+            viewVacName = itemView.findViewById(R.id.viewVacName);
             //viewApellido = itemView.findViewById(R.id.viewApellidos);
-            viewTelefono = itemView.findViewById(R.id.viewTelefono);
-            viewDni = itemView.findViewById(R.id.viewDni);
-            viewCorreo = itemView.findViewById(R.id.viewCorreo);
+            viewVacPlace = itemView.findViewById(R.id.viewVacPlace);
+            //viewDni = itemView.findViewById(R.id.viewDni);
+            //viewCorreo = itemView.findViewById(R.id.viewCorreo);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

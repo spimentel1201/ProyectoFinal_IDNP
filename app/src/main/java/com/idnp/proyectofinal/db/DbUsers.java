@@ -62,7 +62,7 @@ public class DbUsers extends DbHelper {
                 usuario.setNombres(cursorUsuarios.getString(1));
                 usuario.setApellidos(cursorUsuarios.getString(2));
                 usuario.setTelefono(cursorUsuarios.getString(3));
-                usuario.setDni(cursorUsuarios.getString(4));
+                usuario.setDni(Integer.parseInt(cursorUsuarios.getString(4)));
                 usuario.setCorreo_electronico(cursorUsuarios.getString(5));
                 usuario.setContraseña(cursorUsuarios.getString(6));
                 listaUsuarios.add(usuario);
@@ -90,7 +90,7 @@ public class DbUsers extends DbHelper {
             usuario.setNombres(cursorUsuarios.getString(1));
             usuario.setApellidos(cursorUsuarios.getString(2));
             usuario.setTelefono(cursorUsuarios.getString(3));
-            usuario.setDni(cursorUsuarios.getString(4));
+            usuario.setDni(Integer.parseInt(cursorUsuarios.getString(4)));
             usuario.setCorreo_electronico(cursorUsuarios.getString(5));
             usuario.setContraseña(cursorUsuarios.getString(6));
         }

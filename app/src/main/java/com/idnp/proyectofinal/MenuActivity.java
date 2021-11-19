@@ -18,6 +18,7 @@ public class MenuActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     MapFragment mapFragment = new MapFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+    PlacesFragment placesFragment = new PlacesFragment();
     int id_value;
     User x;
     DbUsers DbUsers;
@@ -35,7 +36,7 @@ public class MenuActivity extends AppCompatActivity {
         val = new Bundle();
         val.putString("nombreU",x.getNombres());
         val.putString("correoU",x.getCorreo_electronico());
-        val.putString("dniU",x.getDni());
+        val.putString("dniU",Integer.toString(x.getDni()));
         //getIntent().putExtra("complexObject", x);
 
         //Referencia al bottomNavigation
@@ -56,6 +57,8 @@ public class MenuActivity extends AppCompatActivity {
                 case R.id.navigation_profile:
                     loadFragment(profileFragment);
                     return true;
+                case R.id.navigation_places:
+                    loadFragment(placesFragment);
             }
             return false;
         }

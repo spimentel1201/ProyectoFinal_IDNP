@@ -48,28 +48,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         //Prueba Marcadores en Mapa
-        places = new ArrayList<>();
-        VaccinationPlace a1 = new VaccinationPlace("Universidad Católica Santa Maria","Pfizer",-16.4060596,-71.5476231);
-        VaccinationPlace a2 = new VaccinationPlace("Palacio del Deporte - Arequipa","AstraZeneca",-16.4330838,-71.5307416);
-        VaccinationPlace a3 = new VaccinationPlace("LIGA PERUANA DE LUCHA CONTRA EL CANCER","Pfizer",-16.4090474,-71.537451);
-        VaccinationPlace a4 = new VaccinationPlace("HOSPITAL REGIONAL PNP AREQUIPA","Sinopharm",-16.3426764,-71.5427212);
-        VaccinationPlace a5 = new VaccinationPlace("CLINICA AREQUIPA S.A.","Sinopharm",-16.39230167,-71.53996667);
-        VaccinationPlace a6 = new VaccinationPlace("LABORATORIO REFERENCIAL REGIONAL AREQUIPA","Pfizer",-16.414764,-71.529471);
-        VaccinationPlace a7 = new VaccinationPlace("Colegio Juana Cervantes","AstraZeneca",-16.40536804,-71.54437967);
-        VaccinationPlace a8 = new VaccinationPlace("Estadio UNSA","Sinopharm",-16.4070129,-71.520449);
-        VaccinationPlace a9 = new VaccinationPlace("Plaza Mayta Capac","Pfizer",-16.3943548,-71.5243219);
-        VaccinationPlace a10 = new VaccinationPlace("Colegio Guillermo Mercado Barroso","Pfizer",-16.3725036,-71.5130305);
-        places.add(a1);
-        places.add(a2);
-        places.add(a3);
-        places.add(a4);
-        places.add(a5);
-        places.add(a6);
-        places.add(a7);
-        places.add(a8);
-        places.add(a9);
-        places.add(a10);
-
+        places = getPlacesx();
         //Inicializamos la View
         View view = inflater.inflate(R.layout.map_fragment, container, false);
         //Inicializamos el fragment del mapa
@@ -118,5 +97,31 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
             startActivity(intent);
 
         return false;
+    }
+
+    public ArrayList<VaccinationPlace> getPlacesx(){
+        ArrayList<VaccinationPlace> miLista = new ArrayList<VaccinationPlace>();
+        VaccinationPlace a1 = new VaccinationPlace("Universidad Católica Santa Maria","Pfizer",-16.4060596,-71.5476231);
+        VaccinationPlace a2 = new VaccinationPlace("Palacio del Deporte - Arequipa","AstraZeneca",-16.4330838,-71.5307416);
+        VaccinationPlace a3 = new VaccinationPlace("LIGA PERUANA DE LUCHA CONTRA EL CANCER","Pfizer",-16.4090474,-71.537451);
+        VaccinationPlace a4 = new VaccinationPlace("HOSPITAL REGIONAL PNP AREQUIPA","Sinopharm",-16.3426764,-71.5427212);
+        VaccinationPlace a5 = new VaccinationPlace("CLINICA AREQUIPA S.A.","Sinopharm",-16.39230167,-71.53996667);
+        VaccinationPlace a6 = new VaccinationPlace("LABORATORIO REFERENCIAL REGIONAL AREQUIPA","Pfizer",-16.414764,-71.529471);
+        VaccinationPlace a7 = new VaccinationPlace("Colegio Juana Cervantes","AstraZeneca",-16.40536804,-71.54437967);
+        VaccinationPlace a8 = new VaccinationPlace("Estadio UNSA","Sinopharm",-16.4070129,-71.520449);
+        VaccinationPlace a9 = new VaccinationPlace("Plaza Mayta Capac","Pfizer",-16.3943548,-71.5243219);
+        VaccinationPlace a10 = new VaccinationPlace("Colegio Guillermo Mercado Barroso","Pfizer",-16.3725036,-71.5130305);
+        miLista.add(a1);
+        miLista.add(a2);
+        miLista.add(a3);
+        miLista.add(a4);
+        miLista.add(a5);
+        miLista.add(a6);
+        miLista.add(a7);
+        miLista.add(a8);
+        miLista.add(a9);
+        miLista.add(a10);
+
+        return miLista;
     }
 }
