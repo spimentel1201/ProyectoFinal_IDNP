@@ -1,10 +1,12 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.idnp.proyectofinal.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

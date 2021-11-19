@@ -1,4 +1,4 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

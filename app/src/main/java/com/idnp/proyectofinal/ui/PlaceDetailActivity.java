@@ -1,4 +1,4 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
 
+import com.idnp.proyectofinal.R;
 import com.idnp.proyectofinal.models.VaccinationPlace;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.ui;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.idnp.proyectofinal.viewmodel.HomeViewModel;
+import com.idnp.proyectofinal.R;
 
 public class HomeFragment extends Fragment {
 

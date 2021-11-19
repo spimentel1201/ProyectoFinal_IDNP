@@ -1,4 +1,4 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.ui;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,11 +14,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.idnp.proyectofinal.viewmodel.ProfileViewModel;
+import com.idnp.proyectofinal.R;
 
 public class ProfileFragment extends Fragment {
 

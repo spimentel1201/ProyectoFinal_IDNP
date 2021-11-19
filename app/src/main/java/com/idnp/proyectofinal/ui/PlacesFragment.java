@@ -1,8 +1,7 @@
-package com.idnp.proyectofinal;
+package com.idnp.proyectofinal.ui;
 
 import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.idnp.proyectofinal.viewmodel.PlacesViewModel;
+import com.idnp.proyectofinal.R;
 import com.idnp.proyectofinal.adapters.ListUsersAdapter;
 import com.idnp.proyectofinal.db.DbUsers;
 import com.idnp.proyectofinal.models.User;

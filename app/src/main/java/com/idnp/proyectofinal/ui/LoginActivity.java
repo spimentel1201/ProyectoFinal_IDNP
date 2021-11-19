@@ -1,8 +1,7 @@
-    package com.idnp.proyectofinal;
+    package com.idnp.proyectofinal.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.idnp.proyectofinal.db.DbHelper;
+import com.idnp.proyectofinal.R;
 import com.idnp.proyectofinal.db.DbUsers;
 import com.idnp.proyectofinal.models.User;
 
