@@ -96,7 +96,7 @@
             android:layout_marginEnd="30sp"
             android:textColor="@color/black"
             android:ems="10"
-            android:text="Mantener Sesion iniciada"/>
+            android:text="@string/mantener_sesion_iniciada"/>
 
         <Button
             android:id="@+id/btnIniciarSesion"

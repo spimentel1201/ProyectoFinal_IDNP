@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="title_home">Home</string>
+    <string name="title_location">Location</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TituloCrear">Signup</string>
+    <string name="hint_nombre">Name</string>
+    <string name="hint_apellido">Lastname</string>
+    <string name="hint_telefono">Phone Number</string>
+    <string name="hint_Dni">DNI</string>
+    <string name="hint_correo_electronico">Email</string>
+    <string name="btn_guarda">Sign up</string>
+    <string name="TituloLogin">Login</string>
+    <string name="btn_login">Login</string>
+    <string name="hint_contrasena">Password</string>
+    <string name="title_place">Centers</string>
+    <string name="cerrar_sesion">Logout</string>
+    <string name="tipo_vacuna">Vaccine</string>
+    <string name="dni">DNI</string>
+    <string name="perfil_correo">Email</string>
+    <string name="perfil_nombre">Name</string>
+    <string name="perfil">Profile</string>
+    <string name="coronavirus_titulo">¿What is coronavirus?</string>
+    <string name="coronavirus_descripcion">Coronavirus is an infectious disease caused by a new virus that has not been detected in humans until now..</string>
+    <string name="vacunas_administradas">Vaccines Administered</string>
+    <string name="primera_dosis">One dose</string>
+    <string name="dosis_completa">Full dose</string>
+    <string name="mantener_sesion_iniciada">Keep started session</string>
+    <string name="personas_vacunadas">37,772,743 people</string>
+    <string name="personas_primera_dosis">20,875,814 peoole</string>
+    <string name="personas_dosis_completa">16,481,538 people</string>
+</resources>

@@ -13,4 +13,19 @@
     <string name="btn_login">Iniciar Sesión</string>
     <string name="hint_contrasena">Contraseña</string>
     <string name="title_place">Centros</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="tipo_vacuna">Vacuna</string>
+    <string name="dni">DNI</string>
+    <string name="perfil_correo">Correo</string>
+    <string name="perfil_nombre">Nombre</string>
+    <string name="perfil">Perfil</string>
+    <string name="coronavirus_titulo">¿Qué es el Coronavirus?</string>
+    <string name="coronavirus_descripcion">El coronavirus es una enfermedad infecciosa causada por un nuevo virus que no había sido detectado en humanos hasta el momento.</string>
+    <string name="vacunas_administradas">Vacunas Administradas</string>
+    <string name="primera_dosis">Primera dosis</string>
+    <string name="dosis_completa">Dosis completa</string>
+    <string name="mantener_sesion_iniciada">Mantener Sesion iniciada</string>
+    <string name="personas_vacunadas">37,772,743 personas</string>
+    <string name="personas_primera_dosis">20,875,814 personas</string>
+    <string name="personas_dosis_completa">16,481,538 personas</string>
 </resources>
