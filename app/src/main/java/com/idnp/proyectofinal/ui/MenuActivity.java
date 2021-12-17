@@ -37,7 +37,6 @@ public class MenuActivity extends AppCompatActivity {
         val.putString("nombreU",x.getNombres());
         val.putString("correoU",x.getCorreo_electronico());
         val.putString("dniU",Integer.toString(x.getDni()));
-        //getIntent().putExtra("complexObject", x);
 
         //Referencia al bottomNavigation
         BottomNavigationView navigationView = findViewById(R.id.nav_view);
@@ -58,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
                     loadFragment(profileFragment);
                     return true;
                 case R.id.navigation_places:
-                    
+
             }
             return false;
         }

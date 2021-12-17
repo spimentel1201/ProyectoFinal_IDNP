@@ -20,7 +20,7 @@ public class DbUsers extends DbHelper {
         this.context = context;
     }
 
-    public long agregarUsuario(String nombres,String apellidos, String telefono, String dni, String correo_electronico, String contrasenia) {
+    public long agregarUsuario(String nombres,String apellidos, int telefono, int dni, String correo_electronico, String contrasenia) {
 
         long id = 0;
 
@@ -61,7 +61,7 @@ public class DbUsers extends DbHelper {
                 usuario.setId(cursorUsuarios.getInt(0));
                 usuario.setNombres(cursorUsuarios.getString(1));
                 usuario.setApellidos(cursorUsuarios.getString(2));
-                usuario.setTelefono(cursorUsuarios.getString(3));
+                usuario.setTelefono(Integer.parseInt(cursorUsuarios.getString(3)));
                 usuario.setDni(Integer.parseInt(cursorUsuarios.getString(4)));
                 usuario.setCorreo_electronico(cursorUsuarios.getString(5));
                 usuario.setContraseña(cursorUsuarios.getString(6));
@@ -89,7 +89,7 @@ public class DbUsers extends DbHelper {
             usuario.setId(cursorUsuarios.getInt(0));
             usuario.setNombres(cursorUsuarios.getString(1));
             usuario.setApellidos(cursorUsuarios.getString(2));
-            usuario.setTelefono(cursorUsuarios.getString(3));
+            usuario.setTelefono(Integer.parseInt(cursorUsuarios.getString(3)));
             usuario.setDni(Integer.parseInt(cursorUsuarios.getString(4)));
             usuario.setCorreo_electronico(cursorUsuarios.getString(5));
             usuario.setContraseña(cursorUsuarios.getString(6));
@@ -100,7 +100,7 @@ public class DbUsers extends DbHelper {
         return usuario;
     }
 
-    public boolean editarUsuario(int id, String nombres, String apellidos, String telefono, String dni, String correo_electronico, String contraseña) {
+    public boolean editarUsuario(int id, String nombres, String apellidos, int telefono, int dni, String correo_electronico, String contraseña) {
 
         boolean correcto = false;
 

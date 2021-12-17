@@ -27,8 +27,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nombres TEXT NOT NULL," +
                 "apellidos TEXT NOT NULL," +
-                "telefono TEXT NOT NULL," +
-                "dni TEXT NOT NULL," +
+                "telefono INT NOT NULL," +
+                "dni INT NOT NULL," +
                 "correo_electronico TEXT NOT NULL," +
                 "contraseña TEXT NOT NULL)");
         //sqLiteDatabase.execSQL("insert into TABLE_USUARIOS(nombres,apellidos,telefono,dni,correo_electronico,contraseña) values('admin','admin','000111222','00011100','admin@admin.com','admin@@')");

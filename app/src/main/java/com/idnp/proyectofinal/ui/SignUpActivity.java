@@ -9,17 +9,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.idnp.proyectofinal.R;
 import com.idnp.proyectofinal.db.DbUsers;
 
 public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = "SignUpActivivty";
     EditText txt_nombres,txt_apellidos,txt_dni,txt_telefono,txt_correo,txt_contraseña;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().hide();
+        mAuth = FirebaseAuth.getInstance();
         txt_nombres = findViewById(R.id.txtNombres);
         txt_apellidos = findViewById(R.id.txtApellidos);
         txt_telefono = findViewById(R.id.txtTelefono);
@@ -32,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         if(!txt_nombres.getText().toString().equals("") && !txt_correo.getText().toString().equals("")) {
 
             DbUsers dbUsuarios = new DbUsers(SignUpActivity.this);
-            long id = dbUsuarios.agregarUsuario(txt_nombres.getText().toString(),txt_apellidos.getText().toString(), txt_telefono.getText().toString(),txt_dni.getText().toString(), txt_correo.getText().toString(),txt_contraseña.getText().toString());
+            long id = dbUsuarios.agregarUsuario(txt_nombres.getText().toString(),txt_apellidos.getText().toString(), Integer.parseInt(txt_telefono.getText().toString()),Integer.parseInt(txt_dni.getText().toString()), txt_correo.getText().toString(),txt_contraseña.getText().toString());
 
             if (id > 0) {
                 Toast.makeText(SignUpActivity.this, "REGISTRO EXITOSO ", Toast.LENGTH_LONG).show();
@@ -62,5 +65,8 @@ public class SignUpActivity extends AppCompatActivity {
     public void goToMenu(){
         Intent go = new Intent(this,LoginActivity.class);
         startActivity(go);
+    }
+    public void registrarUsuarioF(View view){
+
     }
 }

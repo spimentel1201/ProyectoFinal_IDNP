@@ -4,7 +4,7 @@ public class User {
     private int id;
     private String nombres;
     private String apellidos;
-    private String telefono;
+    private int telefono;
     private int dni;
     private String correo_electronico;
     private String contraseña;
@@ -25,11 +25,11 @@ public class User {
         this.dni = dni;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
