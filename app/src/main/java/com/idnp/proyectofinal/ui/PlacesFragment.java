@@ -40,14 +40,17 @@ public class PlacesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.places_fragment, container, false);
-        listaU= getActivity().findViewById(R.id.listaXD);
         Log.d(TAG,"llegaste aqui");
+        listaU= (RecyclerView) view.findViewById(R.id.listaUsuarios);
+
         /*fail*/
-        listaU.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        /*dbUsers2 =new DbUsers(this.getContext());
+        listaU.setLayoutManager(new LinearLayoutManager(getContext()));
+        dbUsers2 =new DbUsers(getContext());
         listaPrueba = new ArrayList<>();
-        adapter = new ListUsersAdapter(this.dbUsers2.mostrarUsuarios());
-        listaU.setAdapter(adapter);*/
+        adapter = new ListUsersAdapter(dbUsers2.mostrarUsuarios());
+        Log.d(TAG,"llegaste aqui");
+        System.out.println(dbUsers2.verUsuario(0));
+        listaU.setAdapter(adapter);
         return view;
     }
 

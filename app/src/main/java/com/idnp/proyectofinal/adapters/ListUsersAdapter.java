@@ -1,7 +1,5 @@
 package com.idnp.proyectofinal.adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.UserViewHolder> {
+public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.UsuarioViewHolder> {
 
     ArrayList<User> listaUsuarios;
     ArrayList<User> listaOriginal;
@@ -30,19 +28,19 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.User
 
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UsuarioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_item_x, null, false);
-        return new UserViewHolder(view);
+        return new UsuarioViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListUsersAdapter.UserViewHolder holder, int position) {
-        holder.viewVacName.setText(listaUsuarios.get(position).getNombres());
-        //holder.viewApellido.setText(listaUsuarios.get(position).getApellidos());
-        holder.viewVacPlace.setText(listaUsuarios.get(position).getTelefono());
+    public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position) {
+        holder.viewNombre.setText(listaUsuarios.get(position).getNombres());
+        holder.viewApellido.setText(listaUsuarios.get(position).getApellidos());
+        holder.viewCorreo.setText(listaUsuarios.get(position).getCorreo_electronico());
     }
 
-    /*public void filtrado(final String txtBuscar) {
+    public void filtrado(final String txtBuscar) {
         int longitud = txtBuscar.length();
         if (longitud == 0) {
             listaUsuarios.clear();
@@ -63,36 +61,33 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.User
             }
         }
         notifyDataSetChanged();
-    }*/
+    }
 
     @Override
     public int getItemCount() {
         return listaUsuarios.size();
     }
 
-    public class UserViewHolder extends RecyclerView.ViewHolder {
+    public class UsuarioViewHolder extends RecyclerView.ViewHolder {
 
-        TextView viewVacName, viewVacPlace;
+        TextView viewNombre, viewApellido,viewCorreo;
 
-        public UserViewHolder(@NonNull View itemView) {
+        public UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            viewVacName = itemView.findViewById(R.id.viewVacName);
-            //viewApellido = itemView.findViewById(R.id.viewApellidos);
-            viewVacPlace = itemView.findViewById(R.id.viewVacPlace);
-            //viewDni = itemView.findViewById(R.id.viewDni);
-            //viewCorreo = itemView.findViewById(R.id.viewCorreo);
+            viewNombre = itemView.findViewById(R.id.viewUserName);
+            viewApellido = itemView.findViewById(R.id.viewUserLastName);
+            viewCorreo = itemView.findViewById(R.id.viewUserEmail);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            /*itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Context context = view.getContext();
-                    /*
                     Intent intent = new Intent(context, VerActivity.class);
                     intent.putExtra("ID", listaUsuarios.get(getAdapterPosition()).getId());
-                    context.startActivity(intent);*/
+                    context.startActivity(intent);
                 }
-            });
+            });*/
         }
     }
 }

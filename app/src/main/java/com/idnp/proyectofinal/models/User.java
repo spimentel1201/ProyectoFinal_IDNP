@@ -8,6 +8,11 @@ public class User {
     private int dni;
     private String correo_electronico;
     private String contraseña;
+    private Boolean vacuncacion;
+    private String tipoVacuna;
+
+    //vacunacion si o no
+    //tipo de vacuna
 
     public String getCorreo_electronico() {
         return correo_electronico;
@@ -63,5 +68,20 @@ public class User {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+
+    public Boolean getVacuncacion() {
+        return vacuncacion;
+    }
+
+    public void setVacuncacion(Boolean vacuncacion) {
+        this.vacuncacion = vacuncacion;
+    }
+    public String getTipoVacuna() {
+        return tipoVacuna;
+    }
+
+    public void setTipoVacuna(String tipoVacuna) {
+        this.tipoVacuna = tipoVacuna;
     }
 }

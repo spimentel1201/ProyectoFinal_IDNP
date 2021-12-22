@@ -82,14 +82,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,GoogleMa
     /* Métood para pasar al activity para mostrar details*/
     public boolean onMarkerClick(@NonNull Marker marker) {
 
-            marker.showInfoWindow();
-            //Log.i(TAG,"nombr: "+ places.get(3).getPlaceName());
-            Intent intent = new Intent(getActivity(), PlaceDetailActivity.class);
-            intent.putExtra("PLACE_NAME", marker.getTitle());
-            intent.putExtra("VACCINE_TYPE", marker.getSnippet());
-            intent.putExtra("EXTRA_LATITUD", marker.getPosition().latitude);
-            intent.putExtra("EXTRA_LONGITUD", marker.getPosition().longitude);
-            startActivity(intent);
+        marker.showInfoWindow();
+        //Log.i(TAG,"nombr: "+ places.get(3).getPlaceName());
+        Intent intent = new Intent(getActivity(), PlaceDetailActivity.class);
+        intent.putExtra("PLACE_NAME", marker.getTitle());
+        intent.putExtra("VACCINE_TYPE", marker.getSnippet());
+        intent.putExtra("EXTRA_LATITUD", marker.getPosition().latitude);
+        intent.putExtra("EXTRA_LONGITUD", marker.getPosition().longitude);
+        startActivity(intent);
 
         return false;
     }

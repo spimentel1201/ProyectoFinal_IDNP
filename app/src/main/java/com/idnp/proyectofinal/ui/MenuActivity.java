@@ -57,6 +57,7 @@ public class MenuActivity extends AppCompatActivity {
                     loadFragment(profileFragment);
                     return true;
                 case R.id.navigation_places:
+                    loadFragment(placesFragment);
 
             }
             return false;

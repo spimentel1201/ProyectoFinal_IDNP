@@ -33,7 +33,7 @@
         android:background="@drawable/round_border">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listaXD"
+            android:id="@+id/listaUsuarios"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_width="match_parent"

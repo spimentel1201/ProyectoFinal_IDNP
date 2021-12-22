@@ -11,7 +11,7 @@
         android:title="@string/title_location" />
     <item
         android:id="@+id/navigation_places"
-        android:icon="@drawable/home_menu"
+        android:icon="@drawable/places_menu"
         android:title="@string/title_place" />
 
     <item

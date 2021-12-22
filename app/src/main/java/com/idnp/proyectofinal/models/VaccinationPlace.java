@@ -1,10 +1,13 @@
 package com.idnp.proyectofinal.models;
 
+import java.util.Date;
+
 public class VaccinationPlace {
     double alat, along;
     int id;
     String placeName;
     String vaccineName;
+    Date Fecha;
 
     public VaccinationPlace(){
 
@@ -39,8 +42,13 @@ public class VaccinationPlace {
     public String getVaccineName() {
         return vaccineName;
     }
-
     public void setVaccineName(String vaccineName) {
         this.vaccineName = vaccineName;
+    }
+    public Date getFecha() {
+        return Fecha;
+    }
+    public void setFecha(Date fecha) {
+        Fecha = fecha;
     }
 }
