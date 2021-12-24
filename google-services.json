@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "338907595631",
+    "project_id": "vaccinationplaces",
+    "storage_bucket": "vaccinationplaces.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338907595631:android:3f884f3f45314fa4df9e9a",
+        "android_client_info": {
+          "package_name": "com.idnp.proyectofinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338907595631-qfntrohfrhqb7djltq3c0d3e7rhtu8tt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.idnp.proyectofinal",
+            "certificate_hash": "764af78de0ddfcfdc49a0647e123a3320f20b13b"
+          }
+        },
+        {
+          "client_id": "338907595631-l0l1tku2fcng8389juid8uehn21lq3g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhTHa6SgOkTgNbcD42FuW1aZRPXZZNJKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338907595631-l0l1tku2fcng8389juid8uehn21lq3g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

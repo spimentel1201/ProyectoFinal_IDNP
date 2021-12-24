@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/button_rounded_border.xml" value="0.15" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/round_border.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable-v24/splashitem.xml" value="0.1" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/rounded_border.xml" value="0.15" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/drawable/splash.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_login.xml" value="0.13" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_main.xml" value="0.1984375" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_menu.xml" value="0.17" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_place_detail.xml" value="0.18" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_sign_up.xml" value="0.1796875" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.1984375" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_count.xml" value="0.1984375" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/fragment_marker_detail.xml" value="0.1984375" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/home_fragment.xml" value="0.1568627450980392" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/lista_item_x.xml" value="0.12203947368421053" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/map_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/places_fragment.xml" value="0.12203947368421053" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/layout/profile_fragment.xml" value="0.15" />
+        <entry key="..\:/Users/Sonny/AndroidStudioProjects/ProyectoFinal/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1984375" />
+        <entry key="..\:/Users/USUARIO/Desktop/IDSNP/ProyectoFinal_IDNP-Final/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USUARIO/Desktop/IDSNP/ProyectoFinal_IDNP-Final/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/USUARIO/Desktop/IDSNP/ProyectoFinal_IDNP-Final/app/src/main/res/layout/home_fragment.xml" value="0.11822916666666666" />
+        <entry key="..\:/Users/USUARIO/Desktop/IDSNP/ProyectoFinal_IDNP-Final/app/src/main/res/layout/places_fragment.xml" value="0.11822916666666666" />
+        <entry key="..\:/Users/USUARIO/Desktop/IDSNP/ProyectoFinal_IDNP-Final/app/src/main/res/layout/profile_fragment.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
