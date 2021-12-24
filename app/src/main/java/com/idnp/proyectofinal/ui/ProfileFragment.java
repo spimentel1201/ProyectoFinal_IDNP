@@ -42,9 +42,8 @@ public class ProfileFragment extends Fragment {
         p_dni = (TextView) view.findViewById(R.id.text_dni);
         cerrarSesion = (Button) view.findViewById(R.id.cerrarSesion);
         Bundle datosRecuperados = getArguments();
+        //Verificación si hay datos de usuario, en caso no los hubiera se llenan con datos de invitado la sección de perfil
         if (datosRecuperados == null) {
-            // No hay datos, manejar excepción
-            //Toast.makeText(getActivity(), "No hay datos ", Toast.LENGTH_LONG).show();;
             p_nombre.setText("Usuario Invitado");
             p_correo.setText("invitado@test.com");
             p_dni.setText("00000000");
@@ -52,9 +51,7 @@ public class ProfileFragment extends Fragment {
         String prof_nom = datosRecuperados.getString("nombreU");
         String prof_cor = datosRecuperados.getString("correoU");
         String prof_dni = datosRecuperados.getString("dniU");
-        Log.d("ProfileFragment", "El nombre: " + prof_nom);
-        Log.d("ProfileFragment", "El correo: " + prof_cor);
-        Log.d("ProfileFragment", "El dni: " + prof_dni);
+        //Asignación de datos a los textView de acuerdo al usuario
         p_nombre.setText(prof_nom);
         p_correo.setText(prof_cor);
         p_dni.setText(prof_dni);
@@ -84,8 +81,4 @@ public class ProfileFragment extends Fragment {
         Intent cs = new Intent(getActivity(),LoginActivity.class);
         startActivity(cs);
     }
-    public void nohacernada(){
-
-    }
-
 }

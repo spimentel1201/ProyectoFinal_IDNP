@@ -75,9 +75,9 @@ public class ListUsersAdapter extends RecyclerView.Adapter<ListUsersAdapter.Usua
         public UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            viewNombre = itemView.findViewById(R.id.viewUserName);
-            viewApellido = itemView.findViewById(R.id.viewUserLastName);
-            viewCorreo = itemView.findViewById(R.id.viewUserEmail);
+            //viewNombre = itemView.findViewById(R.id.viewUserName);
+            //viewApellido = itemView.findViewById(R.id.viewUserLastName);
+            //viewCorreo = itemView.findViewById(R.id.viewUserEmail);
 
             /*itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

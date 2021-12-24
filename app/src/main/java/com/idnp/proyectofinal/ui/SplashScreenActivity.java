@@ -65,10 +65,12 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onPause();
         finish();
     }
+    //Cargar de preferencias de usuario
     private void loadSharedPreferences(){
         SharedPreferences pref = getSharedPreferences("datos",Context.MODE_PRIVATE);
         String id = pref.getString("idUser","No hay informacion");
     }
+    //Método para verificar si existen preferencias de usuario guardadas
     private void checkSP(){
         SharedPreferences pref = getSharedPreferences("datos",Context.MODE_PRIVATE);
         String id = pref.getString("idUser","No hay informacion");

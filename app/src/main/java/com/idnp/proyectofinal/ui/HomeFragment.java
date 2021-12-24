@@ -30,7 +30,6 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         d = getActivity().findViewById(R.id.textView);
-        //d.setText("El coronavirus es una enfermedad nueva que arrasa con las vidas humanas.");
         return inflater.inflate(R.layout.home_fragment, container, false);
     }
 

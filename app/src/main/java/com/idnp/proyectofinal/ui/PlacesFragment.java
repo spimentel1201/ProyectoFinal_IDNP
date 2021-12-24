@@ -42,16 +42,11 @@ public class PlacesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.places_fragment, container, false);
-        Log.d(TAG,"llegaste aqui");
         listaU= (RecyclerView) view.findViewById(R.id.listaUsuarios);
-        /*fail*/
         listaU.setLayoutManager(new LinearLayoutManager(getContext()));
-        dbUsers2 =new DbUsers(getContext());
         listaPrueba = new ArrayList<>();
         listaPrueba = MapFragment.getList();
         adapter = new ListVaccinePlacesAdapter(listaPrueba);
-        Log.d(TAG,"llegaste aqui lista de places");
-        System.out.println(dbUsers2.verUsuario(0));
         listaU.setAdapter(adapter);
         return view;
     }

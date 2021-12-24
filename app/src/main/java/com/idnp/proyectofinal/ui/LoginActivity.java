@@ -41,14 +41,6 @@ import java.util.ArrayList;
         }
         /*Boton Comprobar inicio de sesión y redirección a Menu*/
         public void iniciarSesion(View view){
-            if(opcionMantenerSesion.isChecked()){
-              /*Guardar las preferencias de usuario*/
-            }
-            /*Codigo que comprueba los datos*/
-
-            /*Redirección al menú prinipal
-            Intent go = new Intent(this, MenuActivity.class);
-            startActivity(go);*/
             verificarSesion();
         }
         public void verificarSesion(){

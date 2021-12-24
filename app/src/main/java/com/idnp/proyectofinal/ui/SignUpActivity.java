@@ -42,9 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
                 limpiar();
                 goToMenu();
             } else {
-                Log.d(TAG,Long.toString(id));
-                Toast.makeText(SignUpActivity.this, "ERROR AL GUARDAR REGISTRO" + Long.toString(id), Toast.LENGTH_LONG).show();
-                Log.d(TAG,Long.toString(id));
+                Toast.makeText(SignUpActivity.this, "ERROR AL GUARDAR REGISTRO" , Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(SignUpActivity.this, "DEBE LLENAR LOS CAMPOS OBLIGATORIOS", Toast.LENGTH_LONG).show();
@@ -65,8 +63,5 @@ public class SignUpActivity extends AppCompatActivity {
     public void goToMenu(){
         Intent go = new Intent(this,LoginActivity.class);
         startActivity(go);
-    }
-    public void registrarUsuarioF(View view){
-
     }
 }

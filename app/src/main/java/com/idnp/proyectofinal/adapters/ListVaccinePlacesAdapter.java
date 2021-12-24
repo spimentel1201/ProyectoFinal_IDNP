@@ -39,13 +39,9 @@ public class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePl
 
     @Override
     public void onBindViewHolder(@NonNull ListVaccinePlacesAdapter.VaccinePlaceViewHolder holder, int position) {
-        //holder.viewVacName.setText(listaCentros.get(position).getPlaceName());
-        //holder.viewApellido.setText(listaUsuarios.get(position).getApellidos());
-        //holder.viewVacPlace.setText(listaCentros.get(position).getVaccineName());
+        holder.viewVacName.setText(listaCentros.get(position).getPlaceName());
+        holder.viewVacPlace.setText(listaCentros.get(position).getVaccineName());
         //holder.viewVacName.setText(listaCentros.get(position).getFecha().toString());
-        holder.viewNombre.setText(listaCentros.get(position).getPlaceName());
-        holder.viewApellido.setText(listaCentros.get(position).getVaccineName());
-        holder.viewCorreo.setText(Double.toString(listaCentros.get(position).getLat()));
     }
 
     public void filtrado(final String txtBuscar) {
@@ -78,28 +74,17 @@ public class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePl
 
     public class VaccinePlaceViewHolder extends RecyclerView.ViewHolder {
 
-        //TextView viewVacName, viewVacPlace;
-        TextView viewNombre, viewApellido,viewCorreo;
+        TextView viewVacName, viewVacPlace;
         public VaccinePlaceViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            //viewVacName = itemView.findViewById(R.id.viewVacName);
-            //viewApellido = itemView.findViewById(R.id.viewApellidos);
-            //viewVacPlace = itemView.findViewById(R.id.viewVacPlace);
-            //viewDni = itemView.findViewById(R.id.viewDni);
-            //viewCorreo = itemView.findViewById(R.id.viewCorreo);
-            viewNombre = itemView.findViewById(R.id.viewUserName);
-            viewApellido = itemView.findViewById(R.id.viewUserLastName);
-            viewCorreo = itemView.findViewById(R.id.viewUserEmail);
+            viewVacName = itemView.findViewById(R.id.viewVacName);
+            viewVacPlace = itemView.findViewById(R.id.viewVacPlace);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Context context = view.getContext();
-                    /*
-                    Intent intent = new Intent(context, VerActivity.class);
-                    intent.putExtra("ID", listaUsuarios.get(getAdapterPosition()).getId());
-                    context.startActivity(intent);*/
                 }
             });
         }

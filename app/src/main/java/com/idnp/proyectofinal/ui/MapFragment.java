@@ -63,7 +63,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         getVaccinationPlacesFirebase();
         //Prueba Marcadores en Mapa
         places = getPlacesx();
-        //places = getVaccinationPlacesFirebase();
         //Inicializamos la View
         View view = inflater.inflate(R.layout.map_fragment, container, false);
         //Inicializamos el fragment del mapa
