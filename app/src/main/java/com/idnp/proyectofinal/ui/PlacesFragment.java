@@ -15,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.idnp.proyectofinal.adapters.ListVaccinePlacesAdapter;
+import com.idnp.proyectofinal.models.VaccinationPlace;
 import com.idnp.proyectofinal.viewmodel.PlacesViewModel;
 import com.idnp.proyectofinal.R;
 import com.idnp.proyectofinal.adapters.ListUsersAdapter;
@@ -29,8 +31,8 @@ public class PlacesFragment extends Fragment {
     private static final String TAG = "MyActivity";
     RecyclerView listaU;
     DbUsers dbUsers2;
-    ArrayList<User> listaPrueba;
-    ListUsersAdapter adapter;
+    ArrayList<VaccinationPlace> listaPrueba;
+    ListVaccinePlacesAdapter adapter;
 
     public static PlacesFragment newInstance() {
         return new PlacesFragment();
@@ -42,13 +44,13 @@ public class PlacesFragment extends Fragment {
         View view = inflater.inflate(R.layout.places_fragment, container, false);
         Log.d(TAG,"llegaste aqui");
         listaU= (RecyclerView) view.findViewById(R.id.listaUsuarios);
-
         /*fail*/
         listaU.setLayoutManager(new LinearLayoutManager(getContext()));
         dbUsers2 =new DbUsers(getContext());
         listaPrueba = new ArrayList<>();
-        adapter = new ListUsersAdapter(dbUsers2.mostrarUsuarios());
-        Log.d(TAG,"llegaste aqui");
+        listaPrueba = MapFragment.getList();
+        adapter = new ListVaccinePlacesAdapter(listaPrueba);
+        Log.d(TAG,"llegaste aqui lista de places");
         System.out.println(dbUsers2.verUsuario(0));
         listaU.setAdapter(adapter);
         return view;

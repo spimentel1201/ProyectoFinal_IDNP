@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePlacesAdapter.VaccinePlaceViewHolder> {
+public class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePlacesAdapter.VaccinePlaceViewHolder> {
 
     ArrayList<VaccinationPlace> listaCentros;
     ArrayList<VaccinationPlace> listaOriginal;
@@ -39,10 +39,13 @@ class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePlacesAda
 
     @Override
     public void onBindViewHolder(@NonNull ListVaccinePlacesAdapter.VaccinePlaceViewHolder holder, int position) {
-        holder.viewVacName.setText(listaCentros.get(position).getPlaceName());
+        //holder.viewVacName.setText(listaCentros.get(position).getPlaceName());
         //holder.viewApellido.setText(listaUsuarios.get(position).getApellidos());
-        holder.viewVacPlace.setText(listaCentros.get(position).getVaccineName());
-        holder.viewVacName.setText(listaCentros.get(position).getFecha().toString());
+        //holder.viewVacPlace.setText(listaCentros.get(position).getVaccineName());
+        //holder.viewVacName.setText(listaCentros.get(position).getFecha().toString());
+        holder.viewNombre.setText(listaCentros.get(position).getPlaceName());
+        holder.viewApellido.setText(listaCentros.get(position).getVaccineName());
+        holder.viewCorreo.setText(Double.toString(listaCentros.get(position).getLat()));
     }
 
     public void filtrado(final String txtBuscar) {
@@ -75,8 +78,8 @@ class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePlacesAda
 
     public class VaccinePlaceViewHolder extends RecyclerView.ViewHolder {
 
-        TextView viewVacName, viewVacPlace;
-
+        //TextView viewVacName, viewVacPlace;
+        TextView viewNombre, viewApellido,viewCorreo;
         public VaccinePlaceViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -85,6 +88,9 @@ class ListVaccinePlacesAdapter extends RecyclerView.Adapter<ListVaccinePlacesAda
             //viewVacPlace = itemView.findViewById(R.id.viewVacPlace);
             //viewDni = itemView.findViewById(R.id.viewDni);
             //viewCorreo = itemView.findViewById(R.id.viewCorreo);
+            viewNombre = itemView.findViewById(R.id.viewUserName);
+            viewApellido = itemView.findViewById(R.id.viewUserLastName);
+            viewCorreo = itemView.findViewById(R.id.viewUserEmail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

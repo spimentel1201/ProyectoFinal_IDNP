@@ -44,7 +44,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private MapViewModel mViewModel;
     private Marker markerPais;
     GoogleMap map;
-    ArrayList<VaccinationPlace> places;
+    public static ArrayList<VaccinationPlace> places;
     ArrayList<VaccinationPlace> fb;
     LatLng inicio;
     FirebaseDatabase firebaseDatabase;  //Firebase
@@ -196,5 +196,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+    }
+    public static ArrayList<VaccinationPlace> getList(){
+        return places;
     }
 }
