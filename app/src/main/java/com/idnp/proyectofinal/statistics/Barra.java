@@ -109,7 +109,7 @@ public class Barra extends View {
         canvas.drawRect(rect1,p1);
         canvas.drawRect(rect2,p2);
         canvas.drawRect(rect3,p3);
-        canvas.drawText("12-18",230,850,Letras);
+        canvas.drawText("12",200,850,Letras);
         canvas.drawText("2",350,850,Letras);
         canvas.drawText("3",480,850,Letras);
         canvas.drawText("4",590,850,Letras);

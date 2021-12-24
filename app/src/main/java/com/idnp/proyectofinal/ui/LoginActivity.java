@@ -74,4 +74,8 @@ import java.util.ArrayList;
             obj_editor.commit();
             finish();
         }
+        public void irInvitado(View view){
+            Intent go = new Intent(this, MenuActivity.class);
+            startActivity(go);
+        }
 }

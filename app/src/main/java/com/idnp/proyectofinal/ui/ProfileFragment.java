@@ -44,7 +44,10 @@ public class ProfileFragment extends Fragment {
         Bundle datosRecuperados = getArguments();
         if (datosRecuperados == null) {
             // No hay datos, manejar excepción
-            Toast.makeText(getActivity(), "No hay datos ", Toast.LENGTH_LONG).show();;
+            //Toast.makeText(getActivity(), "No hay datos ", Toast.LENGTH_LONG).show();;
+            p_nombre.setText("Usuario Invitado");
+            p_correo.setText("invitado@test.com");
+            p_dni.setText("00000000");
         }
         String prof_nom = datosRecuperados.getString("nombreU");
         String prof_cor = datosRecuperados.getString("correoU");

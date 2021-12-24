@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/fondo"
     tools:context=".ui.HomeFragment">
     <LinearLayout
@@ -132,5 +131,9 @@
                 android:layout_width="400dp"
                 android:layout_height="367dp" />-->
         </LinearLayout>
+        <!--<com.idnp.proyectofinal.statistics.Barra
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"/>-->
     </LinearLayout>
 </ScrollView>

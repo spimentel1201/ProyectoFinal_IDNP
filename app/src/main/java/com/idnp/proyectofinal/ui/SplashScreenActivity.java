@@ -1,5 +1,6 @@
 package com.idnp.proyectofinal.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +10,23 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.idnp.proyectofinal.R;
+import com.idnp.proyectofinal.models.VaccinationPlace;
+
+import java.util.ArrayList;
 
 public class SplashScreenActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;  //Firebase
     DatabaseReference databaseReference;    //Firebase
+    private static final String TAG = "MyActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

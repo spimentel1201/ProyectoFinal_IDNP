@@ -16,4 +16,5 @@
     <string name="btn_login">Iniciar Sesión</string>
     <string name="hint_contrasena">Contraseña</string>
     <string name="title_place">Centros</string>
+    <string name="invitado">Invitado</string>
 </resources>

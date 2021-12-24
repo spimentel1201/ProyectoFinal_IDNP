@@ -34,11 +34,19 @@ public class MenuActivity extends AppCompatActivity {
         DbUsers = new DbUsers(MenuActivity.this);
         id_value = getIntent().getIntExtra("idUser",0);
         Log.i("TAG","tal vez mi id " + id_value);
-        x = DbUsers.verUsuario(id_value);
-        val = new Bundle();
-        val.putString("nombreU",x.getNombres());
-        val.putString("correoU",x.getCorreo_electronico());
-        val.putString("dniU",Integer.toString(x.getDni()));
+        if(id_value != 0){
+            x = DbUsers.verUsuario(id_value);
+            val = new Bundle();
+            val.putString("nombreU",x.getNombres());
+            val.putString("correoU",x.getCorreo_electronico());
+            val.putString("dniU",Integer.toString(x.getDni()));
+        }else{
+            val = new Bundle();
+            val.putString("nombreU","Invitado");
+            val.putString("correoU","invitado@test.com");
+            val.putString("dniU","00000000");
+        }
+
 
         //Referencia al bottomNavigation
         BottomNavigationView navigationView = findViewById(R.id.nav_view);
