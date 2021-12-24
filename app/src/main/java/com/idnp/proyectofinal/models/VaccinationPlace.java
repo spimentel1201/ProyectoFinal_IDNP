@@ -12,7 +12,8 @@ public class VaccinationPlace {
     public VaccinationPlace(){
 
     }
-    public VaccinationPlace(String a, String v, double b, double c){
+    public VaccinationPlace(int id,String a, String v, double b, double c){
+        setId(id);
         setPlaceName(a);
         setCc(b,c);
         setVaccineName(v);

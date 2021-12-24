@@ -138,18 +138,19 @@
             android:textSize="20sp"
             android:text="Pfizer"
             android:layout_marginEnd="30sp" />
-    <Button
-        android:id="@+id/cerrarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_rounded_border"
-        android:layout_gravity="center"
-        android:onClick="cerrarSesion"
-        android:text="Cerrar Sesión"
-        android:textAlignment="center"
-        android:layout_marginBottom="20sp"
-        android:layout_marginTop="20sp"
-        android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/cerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/button_rounded_border"
+            android:onClick="cerrarSesion"
+            android:text="Cerrar Sesión"
+            android:textAlignment="center"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </ScrollView>

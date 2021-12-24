@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
 
@@ -32,6 +33,7 @@ public class MenuActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         DbUsers = new DbUsers(MenuActivity.this);
         id_value = getIntent().getIntExtra("idUser",0);
+        Log.i("TAG","tal vez mi id " + id_value);
         x = DbUsers.verUsuario(id_value);
         val = new Bundle();
         val.putString("nombreU",x.getNombres());
@@ -70,4 +72,6 @@ public class MenuActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout,fragment);
         transaction.commit();
     }
+
+
 }

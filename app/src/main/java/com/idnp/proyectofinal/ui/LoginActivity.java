@@ -2,7 +2,9 @@
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -54,14 +56,22 @@ import java.util.ArrayList;
             String contraseña = txt_ContraL.getText().toString();
             usuarios = DbUsers.mostrarUsuarios();
             for(int i=0;i<usuarios.size();i++){
-                if(usuarios.get(i).getCorreo_electronico().equals(usuario) && usuarios.get(i).getContraseña().equals(contraseña)){
+                if(usuarios.get(i).getCorreo_electronico().equals(usuario) && usuarios.get(i).getContraseña().equals(contraseña) && opcionMantenerSesion.isChecked()){
                     Intent go = new Intent(this, MenuActivity.class);
                     go.putExtra("idUser",usuarios.get(i).getId());
+                    guardarSP(usuarios.get(i).getId());
                     startActivity(go);
                 }else{
                     Toast toast = Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_LONG);
                     toast.show();
                 }
             }
+        }
+        public void guardarSP(int id) {
+            SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+            SharedPreferences.Editor obj_editor = preferencias.edit();
+            obj_editor.putString("idUser", Integer.toString(id));
+            obj_editor.commit();
+            finish();
         }
 }

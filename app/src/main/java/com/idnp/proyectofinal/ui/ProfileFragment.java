@@ -2,7 +2,9 @@ package com.idnp.proyectofinal.ui;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,7 @@ public class ProfileFragment extends Fragment {
     private ProfileViewModel mViewModel;
     Button cerrarSesion;
     private TextView p_nombre,p_correo,p_dni;
+    private SharedPreferences.Editor editor;
 
     public static ProfileFragment newInstance() {
         return new ProfileFragment();
@@ -56,8 +59,7 @@ public class ProfileFragment extends Fragment {
         cerrarSesion.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View v) {
-                                                Intent myIntent = new Intent(getContext(), LoginActivity.class);
-                                                startActivity(myIntent);
+                                                cerrarSesion(v);
                                             }
                                         }
         );
@@ -73,8 +75,14 @@ public class ProfileFragment extends Fragment {
 
     public void cerrarSesion(View view){
         /*Eliminar preferencias de usuario*/
+        editor = getContext().getSharedPreferences("datos", Context.MODE_PRIVATE).edit();
+        editor.clear();
+        editor.commit();
         Intent cs = new Intent(getActivity(),LoginActivity.class);
         startActivity(cs);
+    }
+    public void nohacernada(){
+
     }
 
 }

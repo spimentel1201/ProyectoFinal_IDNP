@@ -3,8 +3,12 @@ package com.idnp.proyectofinal.ui;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
@@ -40,8 +44,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                    startActivity(intent);
+                    checkSP();
                 }
             }
         };
@@ -52,5 +55,22 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         finish();
+    }
+    private void loadSharedPreferences(){
+        SharedPreferences pref = getSharedPreferences("datos",Context.MODE_PRIVATE);
+        String id = pref.getString("idUser","No hay informacion");
+    }
+    private void checkSP(){
+        SharedPreferences pref = getSharedPreferences("datos",Context.MODE_PRIVATE);
+        String id = pref.getString("idUser","No hay informacion");
+        if(id != "No hay informacion"){
+            Log.i("TAG","MI id es "+id);
+            Intent go = new Intent(SplashScreenActivity.this,MenuActivity.class);
+            go.putExtra("idUser",Integer.parseInt(id));
+            startActivity(go);
+        }else{
+            Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 }
